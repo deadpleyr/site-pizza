@@ -8,23 +8,15 @@
 </head>
 <body>
 
-  <!-- ШАПКА -->
+  
   <header>
     <div class="container header-inner">
       
-      <!-- Логотип -->
+      
       <a href="#" class="logo">
         <span class="logo-icon">🍕</span>
         Пиццерия <span>«Помидор»</span>
       </a>
-
-      <!-- Навигация с бургер-меню -->
-      <input type="checkbox" id="burger-toggle" class="burger-toggle">
-      <label for="burger-toggle" class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
 
       <nav class="main-nav">
         <ul>
@@ -36,14 +28,14 @@
         </ul>
       </nav>
 
-      <!-- Блок с телефоном и корзиной -->
+     
       <div class="header-actions">
         <a href="tel:+79991234567" class="phone">
           <span class="phone-icon">📞</span> 
           <span class="phone-text">+7 (999) 123-45-67</span>
         </a>
         
-        <!-- Кнопка открытия корзины -->
+       
         <button class="cart-btn" id="open-cart-btn">
           🛒 <span class="cart-count" id="cart-count">0</span>
         </button>
@@ -52,7 +44,6 @@
     </div>
   </header>
 
-  <!-- ГЕРОЙ -->
   <section class="hero">
     <div class="container hero-content">
       <div class="hero-text">
@@ -65,11 +56,9 @@
     </div>
   </section>
 
-  <!-- МЕНЮ С КАТЕГОРИЯМИ -->
   <section class="menu-section container" id="menu">
     <h2>Наше меню</h2>
 
-    <!-- Фильтры -->
     <input type="radio" name="menu-tab" id="tab-all" class="tab-input" checked>
     <input type="radio" name="menu-tab" id="tab-pizza" class="tab-input">
     <input type="radio" name="menu-tab" id="tab-pasta" class="tab-input">
@@ -88,7 +77,6 @@
 
     <div class="menu-groups">
 
-      <!-- ========== ПИЦЦА ========== -->
       <div class="menu-group group-pizza">
         <h3 class="group-title">🍕 Пицца на дровах</h3>
         <div class="pizza-grid">
@@ -155,7 +143,6 @@
         </div>
       </div>
 
-      <!-- ========== ПАСТА ========== -->
       <div class="menu-group group-pasta">
         <h3 class="group-title">🍝 Паста и горячее</h3>
         <div class="pizza-grid">
@@ -210,7 +197,7 @@
         </div>
       </div>
 
-      <!-- ========== САЛАТЫ ========== -->
+      
       <div class="menu-group group-salad">
         <h3 class="group-title">🥗 Салаты и закуски</h3>
         <div class="pizza-grid">
@@ -256,7 +243,7 @@
         </div>
       </div>
 
-      <!-- ========== НАПИТКИ ========== -->
+      
       <div class="menu-group group-drinks">
         <h3 class="group-title">🥤 Напитки</h3>
         <div class="pizza-grid">
@@ -309,7 +296,6 @@
         </div>
       </div>
 
-      <!-- ========== ДЕСЕРТЫ ========== -->
       <div class="menu-group group-dessert">
         <h3 class="group-title">🍰 Десерты</h3>
         <div class="pizza-grid">
@@ -357,7 +343,6 @@
     </div>
   </section>
 
-  <!-- ПРЕИМУЩЕСТВА -->
   <section class="features" id="features">
     <div class="container">
       <h2>Почему мы?</h2>
@@ -386,7 +371,6 @@
     </div>
   </section>
 
-  <!-- ФУТЕР -->
   <footer>
     <div class="container footer-inner">
       <div class="footer-logo">🍕 Пиццерия <span>«Помидор»</span></div>
@@ -395,12 +379,11 @@
         <a href="mailto:info@pomidor.pizza">info@pomidor.pizza</a>
       </div>
       <div class="copyright">
-        © 2025 Все права защищены. Вкус Италии в каждом кусочке.
+        © 2026 Все права защищены. Вкус Италии в каждом кусочке.
       </div>
     </div>
   </footer>
 
-  <!-- ===== БОКОВАЯ ПАНЕЛЬ КОРЗИНЫ ===== -->
   <div class="cart-overlay" id="cart-overlay"></div>
   <aside class="cart-sidebar" id="cart-sidebar">
     <div class="cart-header">
@@ -421,10 +404,8 @@
     </div>
   </aside>
 
-  <!-- Уведомление о добавлении -->
   <div class="toast" id="toast">Товар добавлен в корзину!</div>
 
-  <!-- ===== JAVASCRIPT ДЛЯ КОРЗИНЫ ===== -->
   <script>
     let cart = [];
 
@@ -435,7 +416,6 @@
     const cartOverlay = document.getElementById('cart-overlay');
     const toast = document.getElementById('toast');
 
-    // Открытие/закрытие корзины
     document.getElementById('open-cart-btn').addEventListener('click', () => {
       cartSidebar.classList.add('open');
       cartOverlay.classList.add('active');
@@ -449,7 +429,7 @@
       cartOverlay.classList.remove('active');
     }
 
-    // Добавление в корзину
+    
     document.querySelectorAll('.add-to-cart').forEach(button => {
       button.addEventListener('click', (e) => {
         const card = e.target.closest('.pizza-card');
@@ -474,7 +454,7 @@
       updateCartUI();
     }
 
-    // Обновление интерфейса
+    
     function updateCartUI() {
       const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
       cartCountEl.textContent = totalItems;
@@ -508,7 +488,7 @@
       cartTotalEl.textContent = `${totalPrice} ₽`;
     }
 
-    // Изменение количества
+
     window.changeQty = function(id, change) {
       const item = cart.find(item => item.id === id);
       if (!item) return;
@@ -522,7 +502,7 @@
       updateCartUI();
     };
 
-    // Уведомление
+    
     let toastTimeout;
     function showToast(message) {
       toast.textContent = message;
@@ -534,7 +514,6 @@
       }, 2500);
     }
 
-    // Оформление заказа
     window.checkout = function() {
       if (cart.length === 0) {
         showToast('Корзина пуста! Добавьте товары.');
