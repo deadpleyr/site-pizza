@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пиццерия «Помидор» · Вкус Италии</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header>
+    <div class="container header-inner">
+      
+      <!-- Логотип -->
+      <a href="#" class="logo">
+        <span class="logo-icon">🍕</span>
+        Пиццерия <span>«Помидор»</span>
+      </a>
+
+      <!-- Навигация с бургер-меню -->
+      <input type="checkbox" id="burger-toggle" class="burger-toggle">
+      <label for="burger-toggle" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#menu">Меню</a></li>
+          <li><a href="#features">О нас</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- Блок с телефоном и корзиной -->
+      <div class="header-actions">
+        <a href="tel:+79991234567" class="phone">
+          <span class="phone-icon">📞</span> 
+          <span class="phone-text">+7 (999) 123-45-67</span>
+        </a>
+        
+        <!-- Кнопка открытия корзины -->
+        <button class="cart-btn" id="open-cart-btn">
+          🛒 <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+      
+    </div>
+  </header>
+
+  <!-- ГЕРОЙ -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="badge">Горячая доставка 30 минут</span>
+        <h1>Настоящая <em>итальянская</em> пицца</h1>
+        <p>Печём на дровах, используем только свежие продукты и секретные рецепты. Попробуйте вкус, который покорил Италию.</p>
+        <a href="#menu" class="btn">Заказать пиццу</a>
+      </div>
+      <div class="hero-image">🍕</div>
+    </div>
+  </section>
+
+  <!-- МЕНЮ С КАТЕГОРИЯМИ -->
+  <section class="menu-section container" id="menu">
+    <h2>Наше меню</h2>
+
+    <!-- Фильтры -->
+    <input type="radio" name="menu-tab" id="tab-all" class="tab-input" checked>
+    <input type="radio" name="menu-tab" id="tab-pizza" class="tab-input">
+    <input type="radio" name="menu-tab" id="tab-pasta" class="tab-input">
+    <input type="radio" name="menu-tab" id="tab-salad" class="tab-input">
+    <input type="radio" name="menu-tab" id="tab-drinks" class="tab-input">
+    <input type="radio" name="menu-tab" id="tab-dessert" class="tab-input">
+
+    <div class="tabs">
+      <label for="tab-all">Всё меню</label>
+      <label for="tab-pizza">🍕 Пицца</label>
+      <label for="tab-pasta">🍝 Паста</label>
+      <label for="tab-salad">🥗 Салаты</label>
+      <label for="tab-drinks">🥤 Напитки</label>
+      <label for="tab-dessert">🍰 Десерты</label>
+    </div>
+
+    <div class="menu-groups">
+
+      <!-- ========== ПИЦЦА ========== -->
+      <div class="menu-group group-pizza">
+        <h3 class="group-title">🍕 Пицца на дровах</h3>
+        <div class="pizza-grid">
+
+          <article class="pizza-card" data-id="p1" data-name="Маргарита" data-price="590">
+            <div class="pizza-emoji">🍕</div>
+            <span class="tag hit">Хит</span>
+            <h3>Маргарита</h3>
+            <p class="pizza-desc">Томатный соус, моцарелла, свежий базилик, оливковое масло</p>
+            <div class="pizza-meta"><span>30 см</span><span>🔥 590 ккал</span></div>
+            <div class="pizza-price">590 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="p2" data-name="Пепперони" data-price="690">
+            <div class="pizza-emoji">🍕</div>
+            <span class="tag spicy">Острое</span>
+            <h3>Пепперони</h3>
+            <p class="pizza-desc">Пикантная пепперони, моцарелла, томатный соус, орегано</p>
+            <div class="pizza-meta"><span>30 см</span><span>🔥 720 ккал</span></div>
+            <div class="pizza-price">690 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="p3" data-name="Четыре сыра" data-price="790">
+            <div class="pizza-emoji">🍕</div>
+            <span class="tag veg">Веган</span>
+            <h3>Четыре сыра</h3>
+            <p class="pizza-desc">Моцарелла, дорблю, пармезан, чеддер, сливочный соус</p>
+            <div class="pizza-meta"><span>30 см</span><span>🔥 810 ккал</span></div>
+            <div class="pizza-price">790 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="p4" data-name="Гавайская" data-price="650">
+            <div class="pizza-emoji">🍕</div>
+            <h3>Гавайская</h3>
+            <p class="pizza-desc">Курица, ананас, моцарелла, томатный соус, сладкий перец</p>
+            <div class="pizza-meta"><span>30 см</span><span>🔥 680 ккал</span></div>
+            <div class="pizza-price">650 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="p5" data-name="Диавола" data-price="740">
+            <div class="pizza-emoji">🍕</div>
+            <span class="tag new">Новинка</span>
+            <h3>Диавола</h3>
+            <p class="pizza-desc">Острая салями, халапеньо, моцарелла, томаты черри, соус чили</p>
+            <div class="pizza-meta"><span>30 см</span><span>🔥 760 ккал</span></div>
+            <div class="pizza-price">740 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="p6" data-name="Овощная" data-price="620">
+            <div class="pizza-emoji">🍕</div>
+            <span class="tag veg">Веган</span>
+            <h3>Овощная</h3>
+            <p class="pizza-desc">Болгарский перец, шампиньоны, черри, оливки, лук, базилик</p>
+            <div class="pizza-meta"><span>30 см</span><span>🔥 560 ккал</span></div>
+            <div class="pizza-price">620 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ========== ПАСТА ========== -->
+      <div class="menu-group group-pasta">
+        <h3 class="group-title">🍝 Паста и горячее</h3>
+        <div class="pizza-grid">
+
+          <article class="pizza-card" data-id="pa1" data-name="Карбонара" data-price="540">
+            <div class="pizza-emoji">🍝</div>
+            <h3>Карбонара</h3>
+            <p class="pizza-desc">Спагетти, гуанчале, желток, пекорино романо, чёрный перец</p>
+            <div class="pizza-meta"><span>320 г</span><span>🔥 650 ккал</span></div>
+            <div class="pizza-price">540 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="pa2" data-name="Болоньезе" data-price="590">
+            <div class="pizza-emoji">🍝</div>
+            <span class="tag hit">Хит</span>
+            <h3>Болоньезе</h3>
+            <p class="pizza-desc">Тальятелле, говяжий фарш, томаты, морковь, пармезан</p>
+            <div class="pizza-meta"><span>350 г</span><span>🔥 710 ккал</span></div>
+            <div class="pizza-price">590 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="pa3" data-name="Паста с томатами" data-price="450">
+            <div class="pizza-emoji">🍝</div>
+            <span class="tag veg">Веган</span>
+            <h3>Паста с томатами</h3>
+            <p class="pizza-desc">Пенне, черри, базилик, чеснок, оливковое масло extra virgin</p>
+            <div class="pizza-meta"><span>300 г</span><span>🔥 480 ккал</span></div>
+            <div class="pizza-price">450 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="pa4" data-name="Лазанья" data-price="640">
+            <div class="pizza-emoji">🥩</div>
+            <h3>Лазанья</h3>
+            <p class="pizza-desc">Слои теста, мясной рагу, соус бешамель, пармезан</p>
+            <div class="pizza-meta"><span>400 г</span><span>🔥 780 ккал</span></div>
+            <div class="pizza-price">640 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="pa5" data-name="Ризотто с грибами" data-price="560">
+            <div class="pizza-emoji">🍲</div>
+            <h3>Ризотто с грибами</h3>
+            <p class="pizza-desc">Рис арборио, белые грибы, сливочное масло, пармезан</p>
+            <div class="pizza-meta"><span>320 г</span><span>🔥 560 ккал</span></div>
+            <div class="pizza-price">560 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ========== САЛАТЫ ========== -->
+      <div class="menu-group group-salad">
+        <h3 class="group-title">🥗 Салаты и закуски</h3>
+        <div class="pizza-grid">
+
+          <article class="pizza-card" data-id="s1" data-name="Цезарь" data-price="420">
+            <div class="pizza-emoji">🥗</div>
+            <span class="tag veg">Веган</span>
+            <h3>Цезарь</h3>
+            <p class="pizza-desc">Романо, курица гриль, пармезан, гренки, соус цезарь</p>
+            <div class="pizza-meta"><span>250 г</span><span>🔥 380 ккал</span></div>
+            <div class="pizza-price">420 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="s2" data-name="Капрезе" data-price="390">
+            <div class="pizza-emoji">🥗</div>
+            <span class="tag veg">Веган</span>
+            <h3>Капрезе</h3>
+            <p class="pizza-desc">Моцарелла, томаты, базилик, оливковое масло, бальзамик</p>
+            <div class="pizza-meta"><span>220 г</span><span>🔥 290 ккал</span></div>
+            <div class="pizza-price">390 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="s3" data-name="Греческий" data-price="370">
+            <div class="pizza-emoji">🥗</div>
+            <h3>Греческий</h3>
+            <p class="pizza-desc">Огурец, томат, перец, фета, оливки, красный лук</p>
+            <div class="pizza-meta"><span>240 г</span><span>🔥 260 ккал</span></div>
+            <div class="pizza-price">370 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="s4" data-name="Брускетта" data-price="290">
+            <div class="pizza-emoji">🧄</div>
+            <h3>Брускетта</h3>
+            <p class="pizza-desc">Хрустящий хлеб, томаты, чеснок, базилик, оливковое масло</p>
+            <div class="pizza-meta"><span>180 г</span><span>🔥 220 ккал</span></div>
+            <div class="pizza-price">290 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ========== НАПИТКИ ========== -->
+      <div class="menu-group group-drinks">
+        <h3 class="group-title">🥤 Напитки</h3>
+        <div class="pizza-grid">
+
+          <article class="pizza-card" data-id="d1" data-name="Кола" data-price="150">
+            <div class="pizza-emoji">🥤</div>
+            <h3>Кола</h3>
+            <p class="pizza-desc">Классическая кола со льдом, 0.5 л</p>
+            <div class="pizza-meta"><span>0.5 л</span><span>🔥 120 ккал</span></div>
+            <div class="pizza-price">150 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="d2" data-name="Лимонад" data-price="180">
+            <div class="pizza-emoji">🍋</div>
+            <h3>Лимонад</h3>
+            <p class="pizza-desc">Домашний лимонад с мятой и лаймом, 0.4 л</p>
+            <div class="pizza-meta"><span>0.4 л</span><span>🔥 90 ккал</span></div>
+            <div class="pizza-price">180 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="d3" data-name="Апельсиновый сок" data-price="170">
+            <div class="pizza-emoji">🍊</div>
+            <h3>Апельсиновый сок</h3>
+            <p class="pizza-desc">Свежевыжатый сок из спелых апельсинов, 0.3 л</p>
+            <div class="pizza-meta"><span>0.3 л</span><span>🔥 110 ккал</span></div>
+            <div class="pizza-price">170 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="d4" data-name="Кофе" data-price="130">
+            <div class="pizza-emoji">☕</div>
+            <h3>Кофе</h3>
+            <p class="pizza-desc">Эспрессо, американо или капучино на выбор</p>
+            <div class="pizza-meta"><span>200 мл</span><span>🔥 60 ккал</span></div>
+            <div class="pizza-price">130 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="d5" data-name="Чай" data-price="120">
+            <div class="pizza-emoji">🍵</div>
+            <h3>Чай</h3>
+            <p class="pizza-desc">Чёрный, зелёный или травяной, с лимоном и мёдом</p>
+            <div class="pizza-meta"><span>400 мл</span><span>🔥 40 ккал</span></div>
+            <div class="pizza-price">120 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ========== ДЕСЕРТЫ ========== -->
+      <div class="menu-group group-dessert">
+        <h3 class="group-title">🍰 Десерты</h3>
+        <div class="pizza-grid">
+
+          <article class="pizza-card" data-id="des1" data-name="Тирамису" data-price="320">
+            <div class="pizza-emoji">🍰</div>
+            <span class="tag hit">Хит</span>
+            <h3>Тирамису</h3>
+            <p class="pizza-desc">Классический итальянский десерт с маскарпоне и кофе</p>
+            <div class="pizza-meta"><span>180 г</span><span>🔥 450 ккал</span></div>
+            <div class="pizza-price">320 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="des2" data-name="Панна котта" data-price="280">
+            <div class="pizza-emoji">🍮</div>
+            <h3>Панна котта</h3>
+            <p class="pizza-desc">Нежное сливочное желе с ягодным соусом</p>
+            <div class="pizza-meta"><span>160 г</span><span>🔥 310 ккал</span></div>
+            <div class="pizza-price">280 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="des3" data-name="Канноли" data-price="250">
+            <div class="pizza-emoji">🥐</div>
+            <h3>Канноли</h3>
+            <p class="pizza-desc">Хрустящая трубочка с рикоттой и цукатами</p>
+            <div class="pizza-meta"><span>140 г</span><span>🔥 360 ккал</span></div>
+            <div class="pizza-price">250 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+          <article class="pizza-card" data-id="des4" data-name="Джелато" data-price="220">
+            <div class="pizza-emoji">🍨</div>
+            <h3>Джелато</h3>
+            <p class="pizza-desc">Итальянское мороженое, три шарика на выбор</p>
+            <div class="pizza-meta"><span>150 г</span><span>🔥 280 ккал</span></div>
+            <div class="pizza-price">220 <small>₽</small></div>
+            <button class="btn-small add-to-cart">В корзину</button>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ПРЕИМУЩЕСТВА -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2>Почему мы?</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">🔥</div>
+          <h3>Дровяная печь</h3>
+          <p>Готовим при 400°C — корочка хрустит, сыр тянется</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🚀</div>
+          <h3>Быстрая доставка</h3>
+          <p>Привезём горячую пиццу за 30 минут или она бесплатно</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🌿</div>
+          <h3>Свежие продукты</h3>
+          <p>Каждое утро привозят фермерские сыры и овощи</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">👨‍🍳</div>
+          <h3>Пиццайоло из Италии</h3>
+          <p>Наши мастера учились в Неаполе и знают толк в тесте</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-logo">🍕 Пиццерия <span>«Помидор»</span></div>
+      <div class="footer-contacts">
+        <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+        <a href="mailto:info@pomidor.pizza">info@pomidor.pizza</a>
+      </div>
+      <div class="copyright">
+        © 2025 Все права защищены. Вкус Италии в каждом кусочке.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== БОКОВАЯ ПАНЕЛЬ КОРЗИНЫ ===== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>🛒 Ваш заказ</h2>
+      <button class="close-cart" id="close-cart-btn">&times;</button>
+    </div>
+    
+    <div class="cart-items" id="cart-items">
+      <p class="cart-empty">Корзина пока пуста :(<br>Добавьте что-нибудь вкусное!</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Итого:</span>
+        <span id="cart-total-price">0 ₽</span>
+      </div>
+      <button class="btn checkout-btn" onclick="checkout()">Оформить заказ</button>
+    </div>
+  </aside>
+
+  <!-- Уведомление о добавлении -->
+  <div class="toast" id="toast">Товар добавлен в корзину!</div>
+
+  <!-- ===== JAVASCRIPT ДЛЯ КОРЗИНЫ ===== -->
+  <script>
+    let cart = [];
+
+    const cartCountEl = document.getElementById('cart-count');
+    const cartItemsEl = document.getElementById('cart-items');
+    const cartTotalEl = document.getElementById('cart-total-price');
+    const cartSidebar = document.getElementById('cart-sidebar');
+    const cartOverlay = document.getElementById('cart-overlay');
+    const toast = document.getElementById('toast');
+
+    // Открытие/закрытие корзины
+    document.getElementById('open-cart-btn').addEventListener('click', () => {
+      cartSidebar.classList.add('open');
+      cartOverlay.classList.add('active');
+    });
+
+    document.getElementById('close-cart-btn').addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', closeCart);
+
+    function closeCart() {
+      cartSidebar.classList.remove('open');
+      cartOverlay.classList.remove('active');
+    }
+
+    // Добавление в корзину
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const card = e.target.closest('.pizza-card');
+        const id = card.dataset.id;
+        const name = card.dataset.name;
+        const price = parseInt(card.dataset.price);
+
+        addToCart(id, name, price);
+        showToast(`«${name}» добавлен в корзину!`);
+      });
+    });
+
+    function addToCart(id, name, price) {
+      const existingItem = cart.find(item => item.id === id);
+
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({ id, name, price, quantity: 1 });
+      }
+
+      updateCartUI();
+    }
+
+    // Обновление интерфейса
+    function updateCartUI() {
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      cartCountEl.textContent = totalItems;
+
+      cartItemsEl.innerHTML = '';
+
+      if (cart.length === 0) {
+        cartItemsEl.innerHTML = '<p class="cart-empty">Корзина пока пуста :(<br>Добавьте что-нибудь вкусное!</p>';
+        cartTotalEl.textContent = '0 ₽';
+        return;
+      }
+
+      cart.forEach(item => {
+        const itemEl = document.createElement('div');
+        itemEl.classList.add('cart-item');
+        itemEl.innerHTML = `
+          <div class="cart-item-info">
+            <h4>${item.name}</h4>
+            <div class="cart-item-price">${item.price} ₽</div>
+          </div>
+          <div class="cart-item-controls">
+            <button class="qty-btn" onclick="changeQty('${item.id}', -1)">-</button>
+            <span>${item.quantity}</span>
+            <button class="qty-btn" onclick="changeQty('${item.id}', 1)">+</button>
+          </div>
+        `;
+        cartItemsEl.appendChild(itemEl);
+      });
+
+      const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      cartTotalEl.textContent = `${totalPrice} ₽`;
+    }
+
+    // Изменение количества
+    window.changeQty = function(id, change) {
+      const item = cart.find(item => item.id === id);
+      if (!item) return;
+
+      item.quantity += change;
+
+      if (item.quantity <= 0) {
+        cart = cart.filter(item => item.id !== id);
+      }
+
+      updateCartUI();
+    };
+
+    // Уведомление
+    let toastTimeout;
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    // Оформление заказа
+    window.checkout = function() {
+      if (cart.length === 0) {
+        showToast('Корзина пуста! Добавьте товары.');
+        return;
+      }
+      
+      const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      alert(`Спасибо за заказ!\nСумма к оплате: ${totalPrice} ₽\nКурьер приедет через 30 минут.`);
+      
+      cart = [];
+      updateCartUI();
+      closeCart();
+    };
+  </script>
+
+</body>
+</html>
