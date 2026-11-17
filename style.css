@@ -1,4 +1,4 @@
-/* ===== БАЗОВЫЕ СБРОСЫ ===== */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
 }
 
-/* ===== ТИПОГРАФИКА / УТИЛИТЫ ===== */
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -43,7 +43,7 @@ h2::after {
   border-radius: 4px;
 }
 
-/* ===== ШАПКА ===== */
+
 header {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
@@ -191,31 +191,8 @@ header {
   50% { transform: rotate(0); }
 }
 
-/* Бургер */
-.burger-toggle { display: none; }
-.burger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-  z-index: 1001;
-  padding: 5px;
-}
 
-.burger span {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: #2e1b0e;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
 
-.burger-toggle:checked ~ .burger span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-.burger-toggle:checked ~ .burger span:nth-child(2) { opacity: 0; }
-.burger-toggle:checked ~ .burger span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
-
-/* ===== ГЕРОЙ-БЛОК ===== */
 .hero {
   background: linear-gradient(135deg, #fdf0e6 0%, #ffe9d6 100%);
   padding: 60px 0 70px;
@@ -303,7 +280,6 @@ header {
   100% { transform: translateY(0); }
 }
 
-/* ===== МЕНЮ ===== */
 .menu-section {
   padding: 50px 0 70px;
 }
@@ -388,7 +364,7 @@ header {
   display: none;
 }
 
-/* ===== КАРТОЧКИ ===== */
+
 .pizza-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -498,7 +474,7 @@ header {
   background: #e63946;
 }
 
-/* ===== ПРЕИМУЩЕСТВА ===== */
+
 .features {
   background: #2e1b0e;
   color: #fdf0e6;
@@ -544,7 +520,7 @@ header {
   font-size: 1rem;
 }
 
-/* ===== ФУТЕР ===== */
+
 footer {
   background: #1e1109;
   color: #bda28c;
@@ -583,7 +559,6 @@ footer {
   color: #7a5f4b;
 }
 
-/* ===== КОРЗИНА ===== */
 .cart-btn {
   background: #fdf0e6;
   border: 2px solid #f4a261;
